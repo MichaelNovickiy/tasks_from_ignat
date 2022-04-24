@@ -12,14 +12,14 @@
 
 .data {
     padding: 10px;
-    background-color: cornflowerblue;
+    background-color: #a8a6a6;
     border-radius: 10px 10px 10px 0;
 }
 
 .angle {
     width: 15px;
     height: 15px;
-    background: radial-gradient(circle at 0 0, rgba(0,0,0,0) 15px, rgba(0,0,0,1) 0);
+    background: radial-gradient(circle at 0 0, rgba(0, 0, 0, 0) 15px, rgba(168, 166, 166, 1) 0);
 }
 
 .text {
@@ -32,10 +32,10 @@
 .name {
     font-size: 20px;
     font-weight: bold;
-    color: red;
+    color: #262626;
 }
 
-.time{
+.time {
     display: flex;
     justify-content: flex-end;
 }
