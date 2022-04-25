@@ -3,7 +3,7 @@ import Greeting from './Greeting'
 import {UserType} from "./HW3";
 
 type GreetingContainerPropsType = {
-    users: UserType
+    users: UserType[]
     addUserCallback: (name: string) => void
 }
 
@@ -12,20 +12,33 @@ type GreetingContainerPropsType = {
 
 // более современный и удобный для про :)
 // уровень локальной логики
-const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
-                                                                     users,
-                                                                     addUserCallback
-                                                                 }) => {
-    const [name, setName] = useState<any>('') // need to fix any
-    const [error, setError] = useState<any>('') // need to fix any
+const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => {
+    const [name, setName] = useState<string>('')
+    const [error, setError] = useState<string>('')
 
     const setNameCallback = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setName(event.currentTarget.value)
+        const trimmedName = event.currentTarget.value.trim()
+
+        if (trimmedName) {
+            setName(trimmedName)
+            setError('')
+        } else {
+            setName('')
+            setError('Title is required')
+        }
     }
     const addUser = () => {
+        addUserCallback(name)
         alert(`Hello  ! ${name}`)
         setTotalUsers(totalUsers + 1)
         setName('')
+    }
+
+    const onEnter = (e:React.KeyboardEvent<HTMLInputElement>)=>{
+        // console.log(e.key)
+        if (e.key === 'Enter') {
+            addUser()
+        }
     }
 
     let [totalUsers, setTotalUsers] = useState<number>(0)
@@ -37,6 +50,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
             addUser={addUser}
             error={error}
             totalUsers={totalUsers}
+            onEnter={onEnter}
         />
     )
 }

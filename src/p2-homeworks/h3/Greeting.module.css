@@ -1,7 +1,29 @@
-.someClass {
+.greeting {
+    display: flex;
+}
 
+input {
+    margin: 10px;
 }
 
 .error {
+    color: red;
+}
+
+.errorInput{
     border: 1px solid red;
+}
+.input {
+    border: 1px solid black;
+}
+.btn {
+    margin: 10px;
+    width: 50px;
+    height: 20px;
+}
+.totalUsers {
+    margin: 10px;
+    font-weight: 500;
+    font-size: large;
+    color: #494848;
 }
