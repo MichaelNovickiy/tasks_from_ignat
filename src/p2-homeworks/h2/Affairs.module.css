@@ -1,3 +1,25 @@
-.someClass {
-
+.affairBlock {
+    background-color: #d7d7d7;
+    width: 230px;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: large;
 }
+
+.id {
+    padding: 5px;
+}
+
+.name {
+    width: 100px;
+    display: inline-block;
+}
+
+.priority {
+    width: 80px;
+    display: inline-block;
+}
+.btn {
+    padding-left: 20px;
+}
+
