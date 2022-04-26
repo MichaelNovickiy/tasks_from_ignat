@@ -39,7 +39,7 @@ function HW4() {
 
                 {/*----------------------------------------------------*/}
 
-                <SuperButton>
+                <SuperButton onClick={showAlert}>
                     default
                 </SuperButton>
 

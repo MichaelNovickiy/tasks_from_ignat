@@ -1,21 +1,24 @@
-.superInput {
-    margin: 10px;
-    background-color: #c9c8c8;
+.input {
+    display: block;
+    width: 100px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    background: #ffffff;
+    line-height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .input:focus{
     outline: none;
-    border: 2px solid #4b4b4b;
+    border: 2px solid #5b5b5b;
 }
 
 .errorInput {
-    margin: 10px;
     border: 2px solid red;
-    background-color: #c9c8c8;
 }
 
 .error {
     color: red;
-    height: 21px;
-    margin-left: 10px;
 }
