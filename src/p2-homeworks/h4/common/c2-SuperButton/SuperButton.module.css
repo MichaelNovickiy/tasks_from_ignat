@@ -1,13 +1,79 @@
+@keyframes blink{
+    0% {
+        left: -130%;
+    }
+    100% {
+        left: 130%;
+    }
+}
+
+
+.btn {
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
 .default {
-    width: 60px;
-    height: 25px;
     background-color: #c9c8c8;
-    border-radius: 5px;
+    outline: none;
 }
 
 .red {
     background: red;
-    width: 60px;
-    height: 25px;
-    border-radius: 5px;
+}
+
+.btn::after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: -130%;
+    top: 0;
+    height: 100%;
+    width: 20%;
+    transform: skew(45deg);
+    background-color: #c9c8c8;
+    opacity: 0.7;
+    z-index: 14;
+}
+
+.btn:hover::after {
+    animation: blink 0.7s ease;
+}
+
+.btn:hover::before {
+    display: block;
+    content: '';
+    position: absolute;
+
+    left: -100vw;
+    top: 0;
+    height: 100vh;
+    width: 300vw;
+
+    z-index: 7;
+
+    background-color: #ffffff;
+    opacity: 0.2;
+}
+
+.btn:focus{
+    outline: solid 1px #000000;
+}
+
+.btn:active{
+    background-color: #d5d5d5;
+}
+
+.btn:disabled{
+    color: #9b9b9b;
+    cursor: auto;
+}
+
+.btn:disabled::after{
+    z-index: -1;
+}
+.btn:disabled::before{
+    z-index: -1;
 }

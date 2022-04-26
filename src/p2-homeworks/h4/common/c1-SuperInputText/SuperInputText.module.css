@@ -1,19 +1,21 @@
 .superInput {
+    margin: 10px;
     background-color: #c9c8c8;
-    border: 1px solid #494848;
-    border-radius: 5px;
-    width: 150px;
-    height: 20px;
-    font-family: serif;
-    font-weight: 500;
+}
+
+.input:focus{
+    outline: none;
+    border: 2px solid #4b4b4b;
 }
 
 .errorInput {
-    border: 3px solid red;
+    margin: 10px;
+    border: 2px solid red;
     background-color: #c9c8c8;
-    border-radius: 5px;
 }
 
 .error {
     color: red;
+    height: 21px;
+    margin-left: 10px;
 }
