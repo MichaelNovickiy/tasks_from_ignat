@@ -1,6 +1,6 @@
 .affairBlock {
     background-color: #b4b4b4;
-    width: 230px;
+    width: 300px;
     border-radius: 10px;
     font-weight: 400;
     font-size: large;
@@ -11,7 +11,7 @@
 }
 
 .name {
-    width: 100px;
+    width: 130px;
     display: inline-block;
 }
 
@@ -19,7 +19,10 @@
     width: 80px;
     display: inline-block;
 }
-.btn {
-    padding-left: 20px;
+.btn :nth-child(n) {
+    margin: 5px;
+}
+.btnRemove {
+    margin: 5px;
 }
 

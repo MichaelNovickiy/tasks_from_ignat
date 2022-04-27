@@ -11,3 +11,7 @@
 .testSpanError {
     color: #9898ff;
 }
+
+.button :nth-child(n) {
+    margin: 5px;
+}
