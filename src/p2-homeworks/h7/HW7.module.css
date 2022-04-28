@@ -1,0 +1,57 @@
+.form_radio_btn {
+    display: flex;
+    flex-direction: row;
+}
+
+.label {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.option {
+    display: inline-block;
+}
+.option:hover {
+    background-color: white;
+}
+
+.select {
+    width: 10vh;
+    cursor: pointer;
+    background-color: #9898ff;
+    color: #fff;
+    font-size: inherit;
+    padding: .5em;
+    padding-right: 2.5em;
+    margin: 10px;
+    border: 0;
+    border-radius: 3px;
+    text-indent: 0.01px;
+    text-overflow: '';
+    -webkit-appearance: button; /* hide default arrow in chrome OSX */
+}
+
+.checkbox {
+    cursor: pointer;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #9898ff;
+    margin-right: 10px;
+}
+
+.checkbox:checked {
+    appearance: none;
+    background-image: url("./common/c6-SuperRadio/check.png");
+    background-size: cover;
+    padding: 2px;
+}
+
+.checkbox:focus {
+    outline: 1px solid #818181;
+}
+
+.checkbox:hover {
+    opacity: 0.7;
+}
