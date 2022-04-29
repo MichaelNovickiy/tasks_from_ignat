@@ -11,4 +11,9 @@ export const loadingReducer = (state = initState, action: any): any => { // fix 
     }
 }
 
-export const loadingAC = (): any => {} // fix any
+export const loadingAC = (loading: boolean): any => {
+    const action = {
+        type: '',
+        loading
+    }
+} // fix any

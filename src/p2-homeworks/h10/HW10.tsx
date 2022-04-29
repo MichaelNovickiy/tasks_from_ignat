@@ -1,5 +1,7 @@
 import React from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import store from './bll/store';
+import {loadingAC} from "./bll/loadingReducer";
 
 function HW10() {
     // useSelector, useDispatch
@@ -7,6 +9,7 @@ function HW10() {
 
     const setLoading = () => {
         // dispatch
+        store.dispatch(loadingAC(loading));
         // setTimeout
         console.log('loading...')
     };
