@@ -1,9 +1,8 @@
 .header {
     display: flex;
-    width: 280px;
+    width: 300px;
     transition-duration: 800ms;
-    transform: translate(-240px);
-    /*margin: 10px;*/
+    transform: translate(-250px);
 }
 
 .header:hover {
